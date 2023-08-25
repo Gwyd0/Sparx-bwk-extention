@@ -1,5 +1,5 @@
 # Sparx Bwk
-**Note: This project is still in development and will have bugs**
+**Note: This project is still in development and not ready yet**
 
 **Sparx-Bookwork-Code (Sparx-BWK)** is a project I've been working on for about a year (mostly as a hobby and because I'm lazy).
 
