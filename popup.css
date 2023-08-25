@@ -1,0 +1,47 @@
+.top {
+	background-color: #181818;
+	color: #fff;
+	border: 2px solid #fff;
+	border-radius: 6px;
+	padding-bottom: 20%;
+}
+
+.blue {color: #aec6cf;}
+
+.top h1 {
+	padding: 1rem;
+	font-size: 3em;
+	margin: auto;
+	text-align: center;
+	font-family: arial;
+}
+.top p {
+	margin: auto;
+	text-align: center;
+	font-family: Monospace;
+}
+
+.links a {
+	color: #aec6cf;
+	margin-left: 20px;
+}
+
+.head {
+	margin: auto;
+	text-align: center;
+	font-family: Monospace;
+	font-size: 1em;
+	padding: 2%;
+}
+
+.logdiv {
+	top: 0; 
+	left: 0;
+	font-family: Monospace;
+}
+.log {
+	display: block;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
