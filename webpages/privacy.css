@@ -1,0 +1,29 @@
+body {
+	font-family: monospace;
+	background-color: var(--background-color);
+	color: var(--font-color);
+	--background-color: #101010;
+	--acsent-color: #576CA8;
+	--darker-acsent-color: #15171f;
+	--font-color: #fff;
+}
+div {max-width: 35%;}
+
+h3 {
+	color: var(--font-color);
+	margin: auto;
+	text-align: left;
+	font-size: 3em;
+	padding: 1%;
+	font-family: arial;
+}
+h1 {color: var(--acsent-color);}
+
+p {
+	font-size: 1.2em;
+	padding: 2px;
+}
+
+li {padding-bottom: 4%;}
+
+span {color: var(--acsent-color);}
