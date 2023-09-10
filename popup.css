@@ -1,48 +1,48 @@
-.top {
+body {
+	margin: auto;
+	font-family: Monospace;
+	text-align: center;
 	--background-color: #101010;
 	--acsent-color: #576CA8;
 	--darker-acsent-color: #15171f;
 	--font-color: #fff;
-	background: linear-gradient(var(--background-color), var(--darker-acsent-color));
-	color: var(--font-color);
-	border: 2px solid var(--font-color);
-	border-radius: 9px;
 }
 
-div {
-	text-align: center;
-	padding-bottom: 3%;
-}
+div {margin-bottom: 4%;}
 
-.acsent {color: var(--acsent-color);}
-.dacsent {color: var(--darker-acsent-color);}
-
-.top h1 {
+h1 {
 	margin: auto;
 	text-align: center;
 	font-size: 3em;
 	padding: 5%;
 	font-family: arial;
 }
-.top p {
-	font-family: Monospace;
-	margin: auto;
+p {
 	text-align: center;
+	margin: auto;
 }
-#settings p {
-	padding: 12px;
-}
-
 a {
 	transition: 500ms;
-	color: var(--font-color);;
-	margin: 1%;
+	color: var(--font-color);
+	padding: 1%;
 }
 a:hover {color: var(--acsent-color);}
 
-.container {
+.top {
+	background: linear-gradient(var(--background-color), var(--darker-acsent-color));
+	color: var(--font-color);
+	border: 2px solid var(--font-color);
+	border-radius: 9px;
 	font-family: Monospace;
-	margin: 5%;
+}
+.acsent {color: var(--acsent-color);}
+.dacsent {color: var(--darker-acsent-color);}
+
+.container {
+	padding: 3%;
+	margin-bottom: 2%;
+	margin-top: 2%;
+	text-align: left;
 	display: block;
 	color:  var(--acsent-color);
 	transition: 500ms;
@@ -63,41 +63,25 @@ a:hover {color: var(--acsent-color);}
 /* Create a custom checkbox */
 .checkmark {
   position: absolute;
-  height: 25px;
-  width: 25px;
-  margin-left: 5%;
+  right: 4%;
+  height: 19px;
+  width: 19px;
   transition: 500ms;
   border: 3px solid var(--acsent-color);
 }
 
-/* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
-   border: 3px solid var(--font-color);;
-}
+.container:hover input ~ .checkmark {border: 3px solid var(--font-color);}
+.container input:checked ~ .checkmark {border: 3px solid var(--acsent-color);}
+.container:hover input:checked ~ .checkmark {border: 3px solid var(--font-color);}
 
-/* When the checkbox is checked, add a blue background */
-.container input:checked ~ .checkmark {
-  border: 3px solid var(--acsent-color);
-  
-}
-.container:hover input:checked ~ .checkmark {
-   border: 3px solid var(--font-color);;
-}
-
-
-/* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
 
-/* Show the checkmark when checked */
-.container input:checked ~ .checkmark:after {
-  display: block;
-}
+.container input:checked ~ .checkmark:after {display: block;}
 
-/* Style the checkmark/indicator */
 .container .checkmark:after {
   width: 5px;
   height: 10px;
@@ -108,22 +92,28 @@ a:hover {color: var(--acsent-color);}
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-.head {
-	font-family: Monospace;
-	font-size: 1em;
+.scroll {
+	height: 90px;
+    overflow-y: auto;
 }
 
-.logdiv {
-	top: 0; 
-	left: 0;
-	height: 100px;
-    overflow-y: auto;
+.btn {
+	width: 100%;
+	border: none;
 	font-family: Monospace;
-	border-radius: 6px;
-	margin-bottom: 20%;
+	text-align: center;
+	background-color: transparent;
 }
+.btn:after {
+	content: '\02795';
+	position: absolute;
+	right: 7%;
+	color: white;
+}
+
+.active:after {content: "\2796";}
+
 .log {
 	display: block;
-	padding-left: 10px;
-	padding-right: 10px;
 }
+

@@ -1,0 +1,51 @@
+body {
+	background-color: #181818;
+	--fbc-primary-text: #fff;
+}
+
+button:hover ._NavButton_ux884_13:hover ._Selected_ux884_173:hover{
+	all: unset;
+	background-color: black;
+}
+._Sidebar_ux884_142 ._NavButton_ux884_13 ._Selected_ux884_173 {
+	background-color: #181818;
+	border-radius: 12px;
+	color: #fff;
+}
+._ButtonBase_10evl_1 {
+	color: #fff;
+	background-color: #181818;
+}
+
+._PageBackgroundImage_13pic_21 {
+	width: 0px;
+	height: 0px;
+}
+
+._BottomBar_1qqdd_29, ._TransitionPage_jihjj_13, ._LQDContainer_2l6st_1, ._BottomBar_1tkp3_1 {
+	background-color: #222222;
+	border: none;
+}
+
+._TaskItemsContainer_1f2cl_1 {
+	margin: 0;
+	background-color: #222222;
+}
+ p, ._Hello_1ehfm_21, ._Sm_tqgyz_21, ._MotivationSection_5ro44_63, ._PackageTypeDescription_1ehfm_32, ._SummaryTitle_5ro44_34, ._MaxWidth_13pic_47, ._Title_ppldj_3, ._TextElement_xv49g_66 {
+	color: #fff;
+}
+._PageBackground_13pic_1, .um-container, ._Selected_ux884_173, ._BannerContainer_5bavm_1 p , ._TransitionContainer_jihjj_1, ._QuestionContainer_138c5_1 {
+	border: none;
+	background-color: #181818;
+} 
+._QuestionContainer_138c5_1 {
+	border: none;
+	margin: none;
+	box-shadow: none;
+	width: 100%;
+}
+
+._Sidebar_ux884_142 {
+	background-color: #101010;
+	padding: 1%;
+} 

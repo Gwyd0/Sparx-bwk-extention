@@ -1,18 +1,27 @@
 {
 
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Sparx-Bwk",
   "description": "Helps you complete your sparx faster.",
-  "version": "1.0.0",
+  "homepage_url": "https://github.com/Gwyd0/Sparx-bwk-extention",
+  "version": "1.0.1",
+  "permissions": ["storage", "scripting", "tabs"],
+  "background": {
+  	"scripts": ["core.js"]
+  },
   "content_scripts": [
 	{
-	"matches": ["<all_urls>"],
+	"matches": ["*://*.sparxmaths.uk/*"],
 	"js": ["content.js"]
 	}
   ],
-  "browser_action": {
+  "icons": {
+    "48": "icons/icon48.png",
+    "96": "icons/icon96.png",
+    "128": "icons/icon96.png"
+  },
+  "action": {
     "default_popup": "popup.html",
-    "default_title": "SparxBWk",
-    "browser_style": true
+    "default_title": "SparxBWk"
   }
 }
