@@ -43,7 +43,7 @@ CsPort.onMessage.addListener((m) => {
 
 // SCRIPT
 function autoLogin() {
-	if (SettingsAutoLogin && document.title.includes("Login") && usr != null) {
+	if (SettingsAutoLogin && document.title.includes("Login") && psw != null) {
 		console.log("")
 		usrInput=document.querySelector("#username");
 		pswInput=document.querySelector("#password");
@@ -64,15 +64,6 @@ function test() {
 	if(document.querySelector('div[class^="_Chip_1l3e3_1 _Selected_1l3e3_13"]') && !submit.classList.contains("_Disabled_10evl_89")&&submit.innerText == "Submit answer"){
 	
 		let bwc=document.querySelector('div[class^="_Chip_1l3e3_1 _Selected_1l3e3_13"]').innerText.replace("Bookwork code: ", "");
-		if (document.getElementsByClassName('katex-mathml') != null) {
-			tiles = document.getElementsByClassName('katex-mathml');
-			submit.addEventListener('click', function() {
-				for (x = 0; x < tiles.length; x++) {
-					answerString = answerString + " " + tiles[x].innerText;
-				}
-				log(bwc, answerString);
-			});
-		}
 		if(document.querySelector("input[placeholder='Enter number']")){
 			const inputs = document.querySelectorAll("input[placeholder='Enter number']");
 			submit.addEventListener('click', function() {
@@ -87,6 +78,24 @@ function test() {
 			submit.addEventListener('click', function() {
 				for (x = 0; x < inputs.length; x++) {
 					answerString = answerString + " " + inputs[x].innerText;
+				}
+				log(bwc, answerString);
+			});
+		}
+		if(document.querySelector("._CardSlot_1yby8_645")){
+			const cards = document.querySelectorAll("._CardSlot_1yby8_645");
+			submit.addEventListener('click', function() {
+				for (x = 0; x < cards.length; x++) {
+					answerString = answerString + " " + cards[x].innerText;
+				}
+				log(bwc, answerString);
+			});
+		}
+		else if (document.getElementsByClassName('katex-mathml') != null) {
+			tiles = document.getElementsByClassName('katex-mathml');
+			submit.addEventListener('click', function() {
+				for (x = 0; x < tiles.length; x++) {
+					answerString = answerString + " " + tiles[x].innerText;
 				}
 				log(bwc, answerString);
 			});
