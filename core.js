@@ -1,24 +1,35 @@
-let SettingsThemeDark = true;
+let BsPort;
+let logs = [];
 
-function handleMessage(request, sender) {
-	if (sender.url.includes("sparxmaths")) { //content.js
-		if (request.log) {
-			//log
-			browser.runtime.sendMessage({log: logString});
-		}
-		else {
-			darkMode(sender.tab.id);
-		}
+
+// Communication: Acts as middleman between popup.js and content.js
+function handleCS(p) {
+	BsPort = p;
+	BsPort.postMessage({ connection: "BG Connected" });
+	BsPort.onMessage.addListener((m) => {
+  		if (m.msgType && m.msgType == "POPUP") {
+  			logs = m.logs;
+  		}
+    console.log(m);
+  });
+}
+function handlePU(m, sender) {
+	console.log(m);
+	if (m.msgType == "POPUP") {
+		browser.runtime.sendMessage({msgType: "POPUP", logs: logs});
 	}
-	else if (sender.url.includes("popup.html")) { // popup.js
-		if (request.id == "checkbox4") {SettingsThemeDark=request.checked;}
-		else {
-			browser.runtime.sendMessage(request);
-		}
-		
+	if (m.msgType == "SETTING") {
+		BsPort.postMessage(m);
 	}
 }
 
+
+browser.runtime.onConnect.addListener(handleCS);
+browser.runtime.onMessage.addListener(handlePU);
+browser.tabs.onUpdated.addListener(() => {BsPort.postMessage({msgType: "PageUpdated"});});
+
+
+/* REWORK
 function darkMode(tab) {
 	if (SettingsThemeDark) {
 		console.log("Dark Theme Enabled")
@@ -38,6 +49,5 @@ function darkMode(tab) {
 		  files: ["./themes/dark.css"],
 		});
 	}
-}
 
-browser.runtime.onMessage.addListener(handleMessage);
+}*/

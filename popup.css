@@ -1,5 +1,6 @@
 body {
 	margin: auto;
+	overflow: hidden;
 	font-family: Monospace;
 	text-align: center;
 	--background-color: #101010;
@@ -11,11 +12,12 @@ body {
 div {margin-bottom: 4%;}
 
 h1 {
-	margin: auto;
 	text-align: center;
 	font-size: 3em;
-	padding: 5%;
+	margin: 2%;
+	position: flex;
 	font-family: arial;
+	
 }
 p {
 	text-align: center;
@@ -95,6 +97,18 @@ a:hover {color: var(--acsent-color);}
 .scroll {
 	height: 90px;
     overflow-y: auto;
+    text-align: center;
+}
+.inputs {
+	padding: 4%;
+	margin: none;
+}
+.inputs input {
+	display: flex;
+	width: 100%;
+	border: 2px solid var(--acsent-color);
+	background-color: var(--darker-acsent-color);
+	color: var(--font-color);
 }
 
 .btn {
@@ -112,8 +126,4 @@ a:hover {color: var(--acsent-color);}
 }
 
 .active:after {content: "\2796";}
-
-.log {
-	display: block;
-}
 

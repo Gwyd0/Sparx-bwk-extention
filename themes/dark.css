@@ -1,6 +1,11 @@
 body {
-	background-color: #181818;
-	--fbc-primary-text: #fff;
+	--background-color: #181818;
+	--background-color-lighter: #222222;
+	--background-color-darker: #101010;
+	--font-color: #fff;
+	
+	background-color: var(--background-color);
+	--fbc-primary-text: var(--font-color);
 }
 
 button:hover ._NavButton_ux884_13:hover ._Selected_ux884_173:hover{
@@ -8,13 +13,13 @@ button:hover ._NavButton_ux884_13:hover ._Selected_ux884_173:hover{
 	background-color: black;
 }
 ._Sidebar_ux884_142 ._NavButton_ux884_13 ._Selected_ux884_173 {
-	background-color: #181818;
+	background-color: var(--background-color);
 	border-radius: 12px;
 	color: #fff;
 }
 ._ButtonBase_10evl_1 {
 	color: #fff;
-	background-color: #181818;
+	background-color: var(--background-color);;
 }
 
 ._PageBackgroundImage_13pic_21 {
@@ -23,29 +28,41 @@ button:hover ._NavButton_ux884_13:hover ._Selected_ux884_173:hover{
 }
 
 ._BottomBar_1qqdd_29, ._TransitionPage_jihjj_13, ._LQDContainer_2l6st_1, ._BottomBar_1tkp3_1 {
-	background-color: #222222;
+	background-color: var(--background-color-lighter);
 	border: none;
 }
 
 ._TaskItemsContainer_1f2cl_1 {
 	margin: 0;
-	background-color: #222222;
+	background-color: var(--background-color-lighter);
 }
- p, ._Hello_1ehfm_21, ._Sm_tqgyz_21, ._MotivationSection_5ro44_63, ._PackageTypeDescription_1ehfm_32, ._SummaryTitle_5ro44_34, ._MaxWidth_13pic_47, ._Title_ppldj_3, ._TextElement_xv49g_66 {
-	color: #fff;
+ p, ._Hello_1ehfm_21, ._MotivationSection_5ro44_63, ._PackageTypeDescription_1ehfm_32, ._SummaryTitle_5ro44_34, ._MaxWidth_13pic_47, ._Title_ppldj_3, ._TextElement_xv49g_66 {
+	color: var(--font-color);
 }
-._PageBackground_13pic_1, .um-container, ._Selected_ux884_173, ._BannerContainer_5bavm_1 p , ._TransitionContainer_jihjj_1, ._QuestionContainer_138c5_1 {
+._Sm_tqgyz_21, ._Content_10evl_162, ._DialogTitle_1b5jn_1{
+	color: var(--font-color);
+	
+}
+._Sm_tqgyz_21:hover, ._Content_10evl_162:hover {
+	color: var(--background-color);
+}
+
+._DialogContent_1b5jn_16 {
+	background-color: var(--background-color);
+}
+
+._PageBackground_13pic_1, .um-container, ._Selected_ux884_173, ._BannerContainer_5bavm_1 p , ._TransitionContainer_jihjj_1, ._QuestionContainer_138c5_1, ._AccordionRoot_oajlw_3, ._CardContent_xv49g_600 {
 	border: none;
-	background-color: #181818;
+	background-color: var(--background-color);
 } 
-._QuestionContainer_138c5_1 {
+._QuestionContainer_138c5_1, ._AccordionItem_oajlw_7{
 	border: none;
 	margin: none;
 	box-shadow: none;
 	width: 100%;
 }
 
-._Sidebar_ux884_142 {
-	background-color: #101010;
+._Sidebar_ux884_142, ._InlineSlotOptions_xv49g_757, ._ButtonsContainer_1cxo7_43{
+	background-color: var(--background-color-darker);
 	padding: 1%;
 } 
