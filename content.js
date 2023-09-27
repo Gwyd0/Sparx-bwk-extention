@@ -20,26 +20,37 @@ let psw=null;
 // rewrite theme thing
 // use listeners more.
 // rework bookwork checks it kinda works :/
+// check that BS AND CS is connected constantly
+
+// START Sparx Maths Student Login
+connect();
+console.log("Loaded SparxBwk");
+autoLogin();
+let elementCheckingInterval = setInterval(function(){
+	test();
+}, 400);
+
 
 // COMMUNICATION
-let CsPort = browser.runtime.connect({ name: "port-from-cs" });
-CsPort.postMessage({ connection: "CS Connected" });
-
-CsPort.onMessage.addListener((m) => {
-	if (m.msgType == "PageUpdated") {
-		CsPort.postMessage({logs: logs, msgType: "POPUP"});
-	}
-	else if (m.msgType == "SETTING") {
-		if (m.usr) {usr=m.usr;}
-		if (m.psw) {psw=m.psw; autoLogin();}
-		
-		if (m.id=="checkbox0") {SettingsBookworkChecks=m.checked;}
-		else if (m.id=="checkbox1") {console.log("rework games?");}
-		else if (m.id=="checkbox2") {SettingsAutoContinue=m.checked;}
-		else if (m.id=="checkbox3") {SettingsAutoLogin=m.checked;}
-		else if (m.id=="checkbox4") {SettingsDarkMode=m.checked;}
-	}
-});
+function connect() {
+	let CsPort = browser.runtime.connect({ name: "port-from-cs" });
+	CsPort.postMessage({ connection: "CS Connected" });
+	CsPort.onMessage.addListener((m) => {
+		if (m.msgType == "PageUpdated") {
+			CsPort.postMessage({logs: logs, msgType: "POPUP"});
+		}
+		else if (m.msgType == "SETTING") {
+			if (m.usr) {usr=m.usr;}
+			if (m.psw) {psw=m.psw; autoLogin();}
+			
+			if (m.id=="checkbox0") {SettingsBookworkChecks=m.checked;}
+			else if (m.id=="checkbox1") {console.log("rework games?");}
+			else if (m.id=="checkbox2") {SettingsAutoContinue=m.checked;}
+			else if (m.id=="checkbox3") {SettingsAutoLogin=m.checked;}
+			else if (m.id=="checkbox4") {SettingsDarkMode=m.checked;}
+		}
+	});
+}
 
 // SCRIPT
 function autoLogin() {
@@ -166,11 +177,3 @@ function logAnswer() {
 	}
 }
 */
-// START Sparx Maths Student Login
-
-console.log("Loaded SparxBwk");
-autoLogin();
-let elementCheckingInterval = setInterval(function(){
-	test();
-}, 400);
-
