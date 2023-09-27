@@ -69,6 +69,8 @@ function autoLogin() {
 }
 
 
+
+
 function test() {
 	let answerString="";
 	const submit = document.querySelector("button[class^='_ButtonBase_10evl_1 _FocusTarget_1nxry_1 _ButtonMd_10evl_27 _ButtonBlue_10evl_51 _ButtonContained_10evl_81']");
@@ -93,8 +95,17 @@ function test() {
 				log(bwc, answerString);
 			});
 		}
-		if(document.querySelector("._CardSlot_1yby8_645")){
-			const cards = document.querySelectorAll("._CardSlot_1yby8_645");
+		if(document.querySelector("._Slot_1468f_635")){
+			const slots = document.querySelectorAll("._Slot_1468f_635");
+			submit.addEventListener('click', function() {
+				for (x = 0; x < slots.length; x++) {
+					answerString = answerString + " " + slots[x].innerText;
+				}
+				log(bwc, answerString);
+			});
+		}
+		if(document.querySelector("._Tile_1468f_725")){
+			const cards = document.querySelectorAll("._Tile_1468f_725");
 			submit.addEventListener('click', function() {
 				for (x = 0; x < cards.length; x++) {
 					answerString = answerString + " " + cards[x].innerText;
