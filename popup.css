@@ -98,6 +98,7 @@ a:hover {color: var(--acsent-color);}
 	height: 90px;
     overflow-y: auto;
     text-align: center;
+    max-width: 800px;
 }
 .inputs {
 	padding: 4%;

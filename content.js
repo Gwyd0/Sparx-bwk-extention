@@ -86,8 +86,8 @@ function test() {
 				log(bwc, answerString);
 			});
 		}
-		if(document.querySelector("._OptionSelected_1yby8_511")){
-			const inputs = document.querySelectorAll("._OptionSelected_1yby8_511");
+		if(document.querySelector("._OptionSelected_1468f_511")){
+			const inputs = document.querySelectorAll("._OptionSelected_1468f_511");
 			submit.addEventListener('click', function() {
 				for (x = 0; x < inputs.length; x++) {
 					answerString = answerString + " " + inputs[x].innerText;
