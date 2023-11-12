@@ -74,9 +74,10 @@ function autoLogin() {
 function test() {
 	let answerString="";
 	const submit = document.querySelector("button[class^='_ButtonBase_10evl_1 _FocusTarget_1nxry_1 _ButtonMd_10evl_27 _ButtonBlue_10evl_51 _ButtonContained_10evl_81']");
-	if(document.querySelector('div[class^="_Chip_1l3e3_1 _Selected_1l3e3_13"]') && !submit.classList.contains("_Disabled_10evl_89")&&submit.innerText == "Submit answer"){
+	if(document.querySelector('div[class^="_Chip_oegf6_1 _Selected_oegf6_13 "]') && !submit.classList.contains("_Disabled_10evl_89")&&submit.innerText == "Submit answer"){
 	
-		let bwc=document.querySelector('div[class^="_Chip_1l3e3_1 _Selected_1l3e3_13"]').innerText.replace("Bookwork code: ", "");
+		let bwc=document.querySelector('div[class^="_Chip_oegf6_1 _Selected_oegf6_13 "]').innerText.replace("Bookwork code: ", "");
+
 		if(document.querySelector("input[placeholder='Enter number']")){
 			const inputs = document.querySelectorAll("input[placeholder='Enter number']");
 			submit.addEventListener('click', function() {
@@ -86,8 +87,8 @@ function test() {
 				log(bwc, answerString);
 			});
 		}
-		if(document.querySelector("._OptionSelected_1468f_511")){
-			const inputs = document.querySelectorAll("._OptionSelected_1468f_511");
+		if(document.querySelector("._OptionSelected_54uav_511")){
+			const inputs = document.querySelectorAll("._OptionSelected_54uav_511");
 			submit.addEventListener('click', function() {
 				for (x = 0; x < inputs.length; x++) {
 					answerString = answerString + " " + inputs[x].innerText;
@@ -95,7 +96,7 @@ function test() {
 				log(bwc, answerString);
 			});
 		}
-		if(document.querySelector("._Slot_1468f_635")){
+		else if(document.querySelector("._Slot_1468f_635")){
 			const slots = document.querySelectorAll("._Slot_1468f_635");
 			submit.addEventListener('click', function() {
 				for (x = 0; x < slots.length; x++) {
@@ -104,7 +105,7 @@ function test() {
 				log(bwc, answerString);
 			});
 		}
-		if(document.querySelector("._Tile_1468f_725")){
+		else if(document.querySelector("._Tile_1468f_725")){
 			const cards = document.querySelectorAll("._Tile_1468f_725");
 			submit.addEventListener('click', function() {
 				for (x = 0; x < cards.length; x++) {
